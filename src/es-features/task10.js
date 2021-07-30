@@ -54,4 +54,31 @@ export function task10Old() {
 // Изменить тело функции task10Old, написав task10New, где заиспользуете
 // класс так, как использовалась функция-конструктор B в task10Old
 
-export function task10New() {}
+export class NewA{
+  constructor(options){
+    this.name = options.name
+  }
+}
+
+class NewB extends NewA{
+  constructor(options){
+    super(options)
+    this.user = options.user
+    this.age = options.age
+  }
+
+  get getName(){
+  return this.name = name
+  }
+
+  set getName (newName){
+  this.name = Name
+  }
+
+}
+const b = new NewB ({
+  name: "Max",
+  age: 12,
+  user:{name:'test', age: 0},
+  color: 'red',
+})
